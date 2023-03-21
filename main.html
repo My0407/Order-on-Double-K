@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base1.css">
+    <link rel="stylesheet" href="./assets/css/style1.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./index.html">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- main -->
+    <div class="app">
+        <!-- header -->
+        <header class="header">
+            <div class="grid wide">
+                <!-- navbar -->
+                <nav class="header__navbar hide-on-mobile-tablet">
+                   
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item header__show-note">
+                            <a href="#" class="header__nav-item-link">
+                                <i class="header__nav-icon far fa-bell"></i>
+                                Thông báo
+                            </a>
+                            <!-- thông báo -->
+                            <div class="header__notifi">
+                                <header class="header__notifi-header">
+                                    <h3>Thông Báo Mới Nhận</h3>
+                                </header>
+                               
+                                <footer class="header__notifi-footer">
+                                    <a href="#" class="header__notifi-footer-btn">Xem tất cả</a>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-item-link">
+                                <i class="header__nav-icon far fa-question-circle"></i>
+                                Hỗ trợ
+                            </a>
+                        </li>
+                        
+                        <li class="header__nav-item header__nav-item--bold header__nav-item--separate">
+                            <a href="#" class="header__nav-item-link">Đăng ký</a>
+                        </li>
+                        <li class="header__nav-item header__nav-item--bold">
+                            <a href="#" class="header__nav-item-link">Đăng nhập</a>
+                        </li>
+
+                        <!-- <li class="header__nav-item header__nav-user">
+                            <img src="./assets/img/user.png" class="header__nav-user-avt">
+                            <a href="#" class="header__nav-item-link header__nav-item--bold">Lục Thiên Phong</a>
+                            <ul class="header__nav-user-menu">
+                                <li class="header__nav-user-item">
+                                    <a href="#">Tài khoản của tôi</a>
+                                </li>
+                                <li class="header__nav-user-item">
+                                    <a href="#">Đơn mua</a>
+                                </li>
+                                <li class="header__nav-user-item">
+                                    <a href="#">Đăng xuất</a>
+                                </li>
+                            </ul>m kiếm
+                        </li> -->
+                    </ul>
+                </nav>
+                <!-- search -->
+                <div class="header__contain">
+                    <label for="mobile-search" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fas fa-search"></i>
+                    </label>
+                    <div class="header__logo">
+                        <a href="#" class="header__logo-link">
+                            <img src="./assets/img/logo/DK.png" class="header__logo-img">
+                        </a>
+                    </div>
+                    <input type="checkbox" id="mobile-search" class="header__search-check" hidden>
+                    <div class="header__search">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" placeholder="Tìm kiếm">
+                            <div class="header__search-history">
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="#"></a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="#">---Tìm kiếm trên Double K---</a>
+                                    </li>
+                                   <div class="icon">
+                                    <i class='bx bx-cart-add'></i>
+                                   </div>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="btn header__search-btn">
+                            <i class="header__search-btn-icon fas fa-search"></i>
+                        </button>
+                    </div>
+                    <!-- header__cart--no-cart --><!-- header__cart--has-cart -->
+                    <div class="header__cart header__cart--has-cart">
+                        <i class="header__cart-icon fas fa-shopping-cart"></i>
+                        <div class="header__cart-count">3</div>
+                        
+                        <div class="header__cart-list no-cart">
+                            <img src="./assets/img/sp/no-cart.png" class="header__no-cart-img">
+                            <p class="header__no-cart-text">Chưa có sản phẩm</p>
+                        </div>
+                        
+                        <div class="header__cart-list has-cart">
+                            <h4 class="header__cart-heading">Sản phẩm đã chọn</h4>
+                            <ul class="header__cart-list-item">
+                                <li class="header__cart-item">
+                                    <img src="https://hips.hearstapps.com/hmg-prod/images/banh-mi-with-grilled-pork1-1663331872.jpg?crop=0.683xw:1.00xh;0.317xw,0&resize=1200:*" class="header__cart-item-img">
+                                    <div class="header__cart-item-info">
+                                        <div class="header__cart-item-heading">
+                                            <h3 class="header__cart-item-name">Bún bò</h3>
+                                            <p class="header__cart-item-price">20.000đ</p>
+                                        </div>
+                                        <div class="header__cart-item-body">
+                                            <p class="header__cart-item-number">x 2</p>
+                                            <div class="header__cart-item-close">
+                                                Xoá
+                                                <i class="fas fa-times"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="header__cart-item">
+                                    <img src="./assets/img/home/Nuocdua-800x450.jpg" class="header__cart-item-img">
+                                    <div class="header__cart-item-info">
+                                        <div class="header__cart-item-heading">
+                                            <h3 class="header__cart-item-name">Nước dừa</h3>
+                                            <p class="header__cart-item-price">20.000đ</p>
+                                        </div>
+                                        <div class="header__cart-item-body">
+                                            <p class="header__cart-item-number">x 1</p>
+                                            <div class="header__cart-item-close">
+                                                Xoá
+                                                <i class="fas fa-times"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                               
+                               
+                               
+                               
+                            </ul>
+                            <div class="header__cart-footer">
+                                <a href="#" class="btn btn--primary header__cart-see-cart">Xem giỏ hàng</a>
+                            </div>
+                        </div>
+                    </div>
+        </header>
+        <!-- container -->
+        <div class="container">
+            <div class="grid wide">
+                <div class="row sm-gutter">
+                    <div class="col l-2 m-0 c-0">
+                        <!-- category -->
+                        <nav class="category">
+                            <h3 class="category-heading">
+                                <i class="category-heading-icon fas fa-list-ul"></i>
+                                Thanh toán và đánh giá
+                            </h3>
+         
+                            
+                           
+             
+                            <div class="category-group">
+                           
+                           
+                            <div class="category-group">
+                                <div class="category-group-title">Lựa Chọn Thanh Toán</div>
+                                <ul class="category-group-list">
+                                    <li class="category-group-item">
+                                        <input type="checkbox" class="category-group-item-check">
+                                        Thanh toán khi nhận món
+                                    </li>
+                                    <li class="category-group-item">
+                                        <input type="checkbox" class="category-group-item-check">
+                                        Chuyển khoản
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                          
+                          
+                            <button class="btn btn--primary category-group-filter-btn category-group--margin">XÁC NHẬN</button>
+                            
+                       
+                        <div class="category-group">
+                            <h1 style="font-size:50px ;">Chúc<br><br><br><br><br><br>Quý<br><br><br><br><br><br>Khách<br><br><br><br><br><br>Ngon<br><br><br><br><br><br>Miệng<br><br><br><br><br><br>♥️</h1>
+            
+                         </div>
+                        </nav>
+                    </div>
+                    <div class="col l-10 m-12 c-12">
+                        <!-- home filter -->
+                        <div class="home-filter hide-on-mobile-tablet">
+                            <div class="home-filter-control">
+                                <li>
+                                    <a  class="btn btn--primary home-filter-btn" href="index.html">Đồ ăn</a>
+                               <a  class="btn home-filter-btn" href ="main.html">Đồ uống</a>  
+                               </li>
+
+                                <!-- <div class="btn home-filter-sort">
+                                    <p class="home-filter-sort-btn">Giá</p>
+                                    <i class="fas fa-sort-amount-down-alt"></i>
+                                    <ul class="home-filter-sort-list">
+                                        <li>
+                                            <a href="#" class="home-filter-sort-item-link">
+                                                Giảm dần
+                                                <i class="fas fa-sort-amount-down-alt"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="home-filter-sort-item-link">
+                                                Tăng dần
+                                                <i class="fas fa-sort-amount-up-alt"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div> -->
+                            </div>
+                            
+                        </div>
+                        <!-- home product -->
+                        <div class="home-product">
+                
+                            <div id="list-product" class="row sm-gutter"></div>
+                            <div class="home-product">
+                            
+                                <div id="list-product" class="row sm-gutter"></div>
+                                <div id="list-product" class="row sm-gutter">
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/cc.jfif);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Bò Húc </h4>
+                                                <div class="home-product-item__price">
+                                                
+                                                    <p class="home-product-item__price-new">18.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                   
+                                                 
+                                                </div>
+                                                
+                                               
+                                             
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/tải\ xuống.jfif);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Nước lọc</h4>
+                                                <div class="home-product-item__price">
+                                                    
+                                                    <p class="home-product-item__price-new">8.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                         
+                                                </div>
+                                                
+                                               
+                                           
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/tải\ xuống\ \(1\).jfif);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Sting</h4>
+                                                <div class="home-product-item__price">
+                                               
+                                                    <p class="home-product-item__price-new">12.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                    
+                                                </div>
+                                                
+                                               
+                                               
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/tải\ xuống\ \(2\).jfif);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Coca Cola</h4>
+                                                <div class="home-product-item__price">
+                                                
+                                                    <p class="home-product-item__price-new">14.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                   
+                                                </div>
+                                                
+                                               
+                                             
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/Nuocdua-800x450.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Nước Dừa</h4>
+                                                <div class="home-product-item__price">
+                                             
+                                                    <p class="home-product-item__price-new">17.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                
+                                                </div>
+                                                
+                                               
+                                              
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/Nuocepcam\(1\)-800x450.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Nước ép cam</h4>
+                                                <div class="home-product-item__price">
+                                     
+                                                    <p class="home-product-item__price-new">30.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                              
+                                                </div>
+                                                
+                                               
+                                              
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/Nuocepcantay-800x450.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Ép cần tây</h4>
+                                                <div class="home-product-item__price">
+                                              
+                                                    <p class="home-product-item__price-new">25.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                  
+                                                </div>
+                                                
+                                               
+                                               
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/Nuoceptao-800x450.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Nước Táo</h4>
+                                                <div class="home-product-item__price">
+                                            
+                                                    <p class="home-product-item__price-new">17.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                   
+                                                </div>
+                                                
+                                               
+                                              
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/Nuoclavoi-800x450.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Nước trà</h4>
+                                                <div class="home-product-item__price">
+                                            
+                                                    <p class="home-product-item__price-new">2.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                   
+                                                </div>
+                                                
+                                               
+                                           
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/Sinhtochuoi-800x450.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Sinh tố chuối</h4>
+                                                <div class="home-product-item__price">
+                                                
+                                                    <p class="home-product-item__price-new">17.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                </div>
+                                                
+                                               
+                                               
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/smoothies-e1601295150109.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Smoothies</h4>
+                                                <div class="home-product-item__price">
+                                                
+                                                    <p class="home-product-item__price-new">20.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                 
+                                                </div>
+                                                
+                                               
+                                               
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/socola-da-xay.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Socola đá xay</h4>
+                                                <div class="home-product-item__price">
+                                                
+                                                    <p class="home-product-item__price-new">20.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                 
+                                                </div>
+                                                
+                                               
+                                            
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/sua-tuoi-chan-trau-duong-den.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Trà sữa</h4>
+                                                <div class="home-product-item__price">
+                                                
+                                                    <p class="home-product-item__price-new">20.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                 
+                                                </div>
+                                                
+                                               
+                                              
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/Suabido-800x450.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Nước bí</h4>
+                                                <div class="home-product-item__price">
+                                                
+                                                    <p class="home-product-item__price-new">20.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                 
+                                                </div>
+                                                
+                                               
+                                                
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/Suadaunanh-800x450.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Sữa đậu nành</h4>
+                                                <div class="home-product-item__price">
+                                                
+                                                    <p class="home-product-item__price-new">20.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                 
+                                                </div>
+                                                
+                                               
+                                              
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/Suagao-800x450.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Sữa gạo</h4>
+                                                <div class="home-product-item__price">
+                                             
+                                                    <p class="home-product-item__price-new">21.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                  
+                                                </div>
+                                                
+                                               
+                                              
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/Suahanhnhan-800x450.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Sữa hạnh nhân</h4>
+                                                <div class="home-product-item__price">
+                                              
+                                                    <p class="home-product-item__price-new">20.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                           
+                                                </div>
+                                                
+                                               
+                                               
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/Suahatsen-800x450.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Sữa hạt sen</h4>
+                                                <div class="home-product-item__price">
+                                                 
+                                                    <p class="home-product-item__price-new">30.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                  
+                                                </div>
+                                                
+                                               
+                                             
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/tra-chanh-con-ca.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Trà chanh</h4>
+                                                <div class="home-product-item__price">
+                                            
+                                                    <p class="home-product-item__price-new">40.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                   
+                                                </div>
+                                                
+                                               
+                                               
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/tra-dao-chanh-sa-e1601333987367.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Trà chanh xả</h4>
+                                                <div class="home-product-item__price">
+                                       
+                                                    <p class="home-product-item__price-new">30.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                
+                                                </div>
+                                                
+                                               
+                                             
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/tra-hoa-dau-biec-e1601334294642.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Trà đậu biếc</h4>
+                                                <div class="home-product-item__price">
+                                 
+                                                    <p class="home-product-item__price-new">18.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                              
+                                                </div>
+                                                
+                                               
+                                             
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/tra-hoa-qua.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Trà hoa quả</h4>
+                                                <div class="home-product-item__price">
+                                        
+                                                    <p class="home-product-item__price-new">23.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                  
+                                                </div>
+                                                
+                                               
+                                               
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/tra-pho-mai-kem-sua.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Phô mai kem</h4>
+                                                <div class="home-product-item__price">
+                                             
+                                                    <p class="home-product-item__price-new">42.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                   
+                                                </div>
+                                                
+                                               
+                                               
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-3 c-6 home-product-item">
+                                        <a class="home-product-item-link" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(./assets/img/home/tra-xanh-chanh-leo-kim-quat-mat-ong.jpg);"></div>
+                                            <div class="home-product-item__info">
+                                                <h4 class="home-product-item__name">Trà chanh leo</h4>
+                                                <div class="home-product-item__price">
+                                             
+                                                    <p class="home-product-item__price-new">17.000đ</p>
+                                                  
+                                                </div>
+                                                <div class="home-product-item__footer">
+                                                    
+                                                   
+                                                </div>
+                                                
+                                               
+                                                
+                                            </div>
+                                            <div class="home-product-item-footer">Đặt Món</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+        <!-- footer -->
+        <div class="footer">
+                        
+        </div>
+    </div>
+
+    <!-- script js -->
+    <script src="./assets/js/product.js"></script>
+</body>
+</html>
